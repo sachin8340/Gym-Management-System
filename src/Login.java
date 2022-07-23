@@ -111,6 +111,11 @@ public class Login extends javax.swing.JFrame {
                 jTextField1MouseClicked(evt);
             }
         });
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextField1KeyPressed(evt);
+            }
+        });
 
         jPasswordField1.setForeground(new java.awt.Color(120, 120, 120));
         jPasswordField1.setText(" Password");
@@ -123,9 +128,19 @@ public class Login extends javax.swing.JFrame {
                 jPasswordField1FocusLost(evt);
             }
         });
+        jPasswordField1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPasswordField1MouseClicked(evt);
+            }
+        });
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordField1ActionPerformed(evt);
+            }
+        });
+        jPasswordField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jPasswordField1KeyPressed(evt);
             }
         });
 
@@ -235,6 +250,7 @@ public class Login extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void LoginButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseEntered
@@ -326,6 +342,26 @@ public class Login extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_jTextField1MouseClicked
+
+    private void jPasswordField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPasswordField1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField1MouseClicked
+
+    private void jTextField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyPressed
+        // TODO add your handling code here:
+         if(jTextField1.getText().equals(" Username")){
+           jTextField1.setText("");
+           jTextField1.setForeground(new Color(120,120,120));
+        }
+    }//GEN-LAST:event_jTextField1KeyPressed
+
+    private void jPasswordField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyPressed
+        // TODO add your handling code here:
+         if(jPasswordField1.getText().equals(" Password")){
+           jPasswordField1.setText("");
+           jPasswordField1.setForeground(new Color(120,120,120));
+        }
+    }//GEN-LAST:event_jPasswordField1KeyPressed
 
     /**
      * @param args the command line arguments
